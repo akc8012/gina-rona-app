@@ -7,14 +7,35 @@
     "preact": "^10.4.5"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.0",
+    "@types/jest": "^26.0.3",
     "jest": "^26.1.0",
+    "jest-extended": "^0.11.5",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.9",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.6"
   },
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
+    "moduleNameMapper": {
+      ".+\\.css$": "<rootDir>/src/styleMock.ts"
+    },
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
   }
 }
