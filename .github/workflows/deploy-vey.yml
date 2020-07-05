@@ -1,0 +1,27 @@
+name: Continuous deploy-vey-ment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-vey:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install yarn dependencies
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./dist
