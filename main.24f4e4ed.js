@@ -5,4 +5,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"AglL":[function(require,module,exports) {
 "use strict";var e=require("preact");function r(){return(0,e.h)("h1",null,"Hello friends!")}require("./style.scss"),(0,e.render)((0,e.h)(r,null),document.getElementById("root"));
 },{"preact":"u8ui","./style.scss":"T0VR"}]},{},["AglL"], null)
-//# sourceMappingURL=/main.24f4e4ed.js.map
+//# sourceMappingURL=https://akc8012.github.io/gina-rona-app/main.24f4e4ed.js.map
