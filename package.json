@@ -29,7 +29,7 @@
       "js"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.ts"
+      "<rootDir>/testSetup.ts"
     ]
   }
 }
