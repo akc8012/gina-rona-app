@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url https://akc8012.github.io/gina-rona-app/",
+    "build": "parcel build index.html --public-url ./",
     "test": "jest"
   },
   "jest": {
