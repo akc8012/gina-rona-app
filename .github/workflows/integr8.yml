@@ -1,0 +1,19 @@
+name: Continuous integr8ion
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install yarn dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
