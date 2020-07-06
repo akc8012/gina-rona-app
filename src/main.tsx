@@ -9,7 +9,7 @@ function App() {
 		<section class='section'>
 			<div class='container'>
 				<h1 class='title'>
-					Hello World
+					Hello friends!
 				</h1>
 				<p class='subtitle'>
 					My first website with <strong>Ligma.bs</strong>!
