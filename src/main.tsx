@@ -32,6 +32,9 @@ function App() {
 				</h1>
 
 				<img src={gina} />
+				<p class='subtitle is-4'>
+					<i>"Now's a great time to vacation in Rhode Island, and even visit your second home!"</i> - <b>Gina Romundus</b>, 2020
+				</p>
 			</div>
 		</section>
 	);
