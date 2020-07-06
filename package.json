@@ -4,6 +4,7 @@
   "license": "GPL-3.0-only",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
+    "assets": "^3.0.1",
     "bulma": "^0.9.0",
     "preact": "^10.4.5"
   },
