@@ -1,10 +1,19 @@
 import { h, render } from 'preact';
-import gina from './assets/two.png'; // TODO: why is there an error?
+import { useState, useEffect } from 'preact/hooks';
+
+// TODO: Why is there an error?
+import gina from './assets/two.png';
 import 'bulma/css/bulma.css'
-// import './style.scss'
-// import '@fortawesome/fontawesome-free/css/all.css';
 
 function App() {
+	const [stonks, setStonks] = useState(0);
+
+	useEffect(() => {
+		fetch('https://covidtracking.com/api/states?state=ri')
+			.then((response: any) => response.json())
+			.then((data) => setStonks(data.positive));
+	});
+
 	return (
 		<section class='hero is-dark is-bold is-fullheight'>
 			<div class='container'>
@@ -14,7 +23,7 @@ function App() {
 				<p class='subtitle'>
 					According to all known laws of aviation, there is no reason a bee should be able to fly.
 				</p>
-				<h1 class='title is-1'>3,000</h1>
+				<h1 class='title is-1'>{stonks}</h1>
 				<img src={gina} />
 			</div>
 		</section>
