@@ -5,13 +5,15 @@ import { useState, useEffect } from 'preact/hooks';
 import gina from './assets/two.png';
 import 'bulma/css/bulma.css'
 
+const initialPositive = 16991;
+
 function App() {
 	const [stonks, setStonks] = useState(0);
 
 	useEffect(() => {
 		fetch('https://covidtracking.com/api/states?state=ri')
 			.then((response: any) => response.json())
-			.then((data) => setStonks(data.positive));
+			.then((data) => setStonks(data.positive - initialPositive));
 	});
 
 	return (
