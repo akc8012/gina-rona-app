@@ -1,19 +1,18 @@
 import { h, render } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
+import { calculateTotalNewCases } from './calculateTotalNewCases';
 
 // TODO: Why is there an error?
 import gina from './assets/two.png';
 import 'bulma/css/bulma.css'
 
-const initialPositive = 16991;
-
 function App() {
-	const [stonks, setStonks] = useState(0);
+	const [cases, setCases] = useState(0);
 
 	useEffect(() => {
 		fetch('https://covidtracking.com/api/states?state=ri')
 			.then((response: any) => response.json())
-			.then((data) => setStonks(data.positive - initialPositive));
+			.then((data) => setCases(calculateTotalNewCases(data.positive)));
 	});
 
 	return (
@@ -28,7 +27,7 @@ function App() {
 				</p>
 
 				<h1 class='title is-1'>
-					{stonks}
+					{cases}
 				</h1>
 
 				<img src={gina} />
