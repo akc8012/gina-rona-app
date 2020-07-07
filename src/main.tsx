@@ -32,13 +32,16 @@ function App() {
 				</h1>
 
 				{/* TODO: Move this to .scss file */}
-				<p class='bottom-text subtitle is-4' style={{ position: 'absolute', bottom: '0' }}>
-					<i>"Now's a great time to vacation in Rhode Island, and even visit your second home!"</i> - <b>Gina Romundus</b>, 2020
-				</p>
 
-				<p class='subtitle is-6' style={{ position: 'absolute', bottom: '0', left: '50%', marginLeft: '-220px', marginBottom: '-2rem' }}>
-					Made by <a class='has-text-link-light' href='https://acolannino.io'><b>acolannino</b></a> and <b>u/whalecat4</b>, with help from friends.
-				</p>
+				<div style={{ position: 'absolute', bottom: '0' }}>
+					<p class='bottom-text subtitle is-4'>
+						<i>"Now's a great time to vacation in Rhode Island, and even visit your second home!"</i> - <b>Gina Romundus</b>, 2020
+					</p>
+
+					<p class='subtitle is-6 has-text-centered'>
+						Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a> and <b>u/whalecat4</b>, with help from friends.
+					</p>
+				</div>
 			</div>
 		</section>
 	);
