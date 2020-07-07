@@ -1,18 +1,20 @@
 import { h, render } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
+
 import { calculateTotalNewCases } from './calculateTotalNewCases';
+import { fetchCovidCases as getCovidCasesWith } from './fetchCovidCases';
 
 // TODO: Why is there an error?
 import gina from './assets/two.png';
 import 'bulma/css/bulma.css'
 
+
 function App() {
 	const [cases, setCases] = useState(0);
 
 	useEffect(() => {
-		fetch('https://covidtracking.com/api/states?state=ri')
-			.then((response: any) => response.json())
-			.then((data) => setCases(calculateTotalNewCases(data.positive)));
+		getCovidCasesWith(fetch)
+			.then((cases) => setCases(calculateTotalNewCases(cases)));
 	});
 
 	return (
