@@ -28,11 +28,9 @@ function App() {
 					This is the <b>total</b> number of <b>new</b> cases in RI starting once the <b>July 4th weekend</b> (July 3 - July 5) finishes.
 				</p>
 
-				<h1 class='title is-1 has-text-centered has-text-danger' style={{ fontSize: '34vw', whiteSpace: 'nowrap' }}>
+				<h1 class='title is-1 has-text-centered has-text-danger' style={{ fontSize: '28vw', whiteSpace: 'nowrap' }}>
 					{cases}
 				</h1>
-
-				{/* TODO: Move this to .scss file */}
 
 				<div style={{ position: 'absolute', bottom: '0' }}>
 					<p class='bottom-text subtitle is-5'>
