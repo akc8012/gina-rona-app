@@ -25,7 +25,7 @@ function App() {
 				</h3>
 
 				<p class='subtitle'>
-					This is the <b>total</b> number of <b>new</b> cases in RI starting once the <b>July 4th weekend</b> (July 3 - July 5) finishes.
+					This is the <b>total</b> number of <b>new</b> cases in RI since <b>July 5, 2020</b>.
 				</p>
 
 				<h1 class='title is-1 has-text-centered has-text-danger' style={{ fontSize: '28vw', whiteSpace: 'nowrap' }}>
