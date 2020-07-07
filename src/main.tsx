@@ -7,6 +7,7 @@ import { fetchCovidCases as getCovidCasesWith } from './fetchCovidCases';
 // TODO: Why is there an error?
 // import gina from './assets/two.png';
 import 'bulma/css/bulma.css'
+import './style.scss';
 
 function App() {
 	const [cases, setCases] = useState(0);

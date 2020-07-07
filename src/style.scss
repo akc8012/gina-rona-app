@@ -1,9 +1,6 @@
-$primary-color: #f0ead6;
-$secondary-color: #32527b;
-
+html,
 body {
-  font-family: sans-serif;
-
-  color: $primary-color;
-  background-color: $secondary-color;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
