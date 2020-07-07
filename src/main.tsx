@@ -41,7 +41,7 @@ function App() {
 						Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a> and <b>u/whalecat4</b>, with help from friends.
 					</p>
 					<p class='subtitle is-7 has-text-centered'>
-						This app is <a class='has-text-primary-light' href='https://en.wikipedia.org/wiki/Free_software'><b>Free Software</b></a>,
+						This app is <a class='has-text-primary-light' href='https://en.wikipedia.org/wiki/Free_software'><b>free software</b></a>,
 						and its source is available on <a class='has-text-primary-light' href='https://github.com/akc8012/gina-rona-app'><b>GitHub</b></a>.
 					</p>
 				</div>
