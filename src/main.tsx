@@ -38,7 +38,8 @@ function App() {
 					</p>
 
 					<p class='subtitle is-7 has-text-centered' style={{ marginBottom: 0 }}>
-						Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a> and <b>u/whalecat4</b>, with help from friends.
+						Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a>, <b>u/whalecat4</b>,
+						and <a class='has-text-primary-light' href='https://github.com/dillonfagan'><b>dillonfagan</b></a>, with help from friends.
 					</p>
 					<p class='subtitle is-7 has-text-centered'>
 						This app is <a class='has-text-primary-light' href='https://en.wikipedia.org/wiki/Free_software'><b>free software</b></a>,
