@@ -27,7 +27,7 @@ function App() {
 					This is the <b>total</b> number of <b>new</b> cases in RI starting once the <b>July 4th weekend</b> (July 3 - July 5) finishes.
 				</p>
 
-				<h1 class='title is-1 has-text-centered has-text-danger' style={{ fontSize: '34vw' }}>
+				<h1 class='title is-1 has-text-centered has-text-danger' style={{ fontSize: '34vw', whiteSpace: 'nowrap' }}>
 					{cases}
 				</h1>
 
