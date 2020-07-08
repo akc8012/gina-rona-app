@@ -8,14 +8,23 @@ import { fetchCovidCases as getCovidCasesWith } from './fetchCovidCases';
 // import gina from './assets/two.png';
 import 'bulma/css/bulma.css'
 import './style.scss';
+import { useInterval } from './useInterval';
 
 function App() {
-	const [cases, setCases] = useState(0);
+	const [total, setTotal] = useState(0);
+	const [counter, setCounter] = useState(0);
 
 	useEffect(() => {
 		getCovidCasesWith(fetch)
-			.then((cases) => setCases(calculateTotalNewCases(cases)));
+			.then((cases) => {
+				setTotal(calculateTotalNewCases(cases));
+			});
 	});
+
+	const delay = 50;
+	useInterval(() => {
+		setCounter(counter + 1);
+	}, (counter < total) ? delay : null);
 
 	return (
 		<section class='hero section is-dark is-fullheight'>
@@ -29,7 +38,7 @@ function App() {
 				</p>
 
 				<h1 class='title is-1 has-text-centered has-text-danger' style={{ fontSize: '28vw', whiteSpace: 'nowrap' }}>
-					{cases}
+					{counter}
 				</h1>
 
 				<div style={{ position: 'absolute', bottom: '0' }}>
