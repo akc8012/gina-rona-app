@@ -1,39 +1,14 @@
 // TODO: Why is there an error?
 // import gina from './assets/two.png';
 import 'bulma/css/bulma.css'
-import './style.scss';
+// import './style.scss';
 
 import { h, render } from 'preact';
-import { useState, useEffect } from 'preact/hooks';
 
-import { calculateTotalNewCases } from './calculateTotalNewCases';
-import { fetchCovidCases as getCovidCasesWith } from './fetchCovidCases';
-import { useInterval } from './useInterval';
 import { CloutText } from './components/CloutText';
+import { CaseCounter } from './CaseCounter';
 
 function App() {
-	const [total, setTotal] = useState(0);
-	const [counter, setCounter] = useState(0);
-	const [delay, setDelay] = useState(600);
-	const [threshold, setThreshold] = useState(3);
-
-	useEffect(() => {
-		getCovidCasesWith(fetch)
-			.then((cases) => {
-				setTotal(calculateTotalNewCases(cases));
-			});
-	});
-
-	useInterval(() => {
-		setCounter(counter + 1);
-
-		if (counter > threshold) {
-			setDelay(delay / 2);
-			setThreshold(threshold * 1.5);
-		}
-
-	}, (counter < total) ? delay : null);
-
 	return (
 		<section class='hero section is-dark is-fullheight'>
 			<div class='container'>
@@ -45,9 +20,7 @@ function App() {
 					This is the <b>total</b> number of <b>new</b> cases in RI since <b>July 5, 2020</b>.
 				</p>
 
-				<h1 class='title is-1 has-text-centered has-text-danger' style={{ fontSize: '28vw', whiteSpace: 'nowrap' }}>
-					{counter}
-				</h1>
+				<CaseCounter />
 
 				<div style={{ position: 'absolute', bottom: '0' }}>
 					<p class='bottom-text subtitle is-5'>
