@@ -13,7 +13,8 @@ import { useInterval } from './useInterval';
 function App() {
 	const [total, setTotal] = useState(0);
 	const [counter, setCounter] = useState(0);
-	const [delay, setDelay] = useState(60);
+	const [delay, setDelay] = useState(600);
+	const [threshold, setThreshold] = useState(3);
 
 	useEffect(() => {
 		getCovidCasesWith(fetch)
@@ -25,9 +26,10 @@ function App() {
 	useInterval(() => {
 		setCounter(counter + 1);
 
-		if (counter > total / 6) setDelay(delay - 20);
-		if (counter > total / 4) setDelay(delay - 20);
-		if (counter > total / 2) setDelay(delay - 10);
+		if (counter > threshold) {
+			setDelay(delay / 2);
+			setThreshold(threshold * 1.5);
+		}
 
 	}, (counter < total) ? delay : null);
 
