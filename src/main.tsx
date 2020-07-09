@@ -1,14 +1,15 @@
+// TODO: Why is there an error?
+// import gina from './assets/two.png';
+import 'bulma/css/bulma.css'
+import './style.scss';
+
 import { h, render } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 
 import { calculateTotalNewCases } from './calculateTotalNewCases';
 import { fetchCovidCases as getCovidCasesWith } from './fetchCovidCases';
-
-// TODO: Why is there an error?
-// import gina from './assets/two.png';
-import 'bulma/css/bulma.css'
-import './style.scss';
 import { useInterval } from './useInterval';
+import { CloutText } from './components/CloutText';
 
 function App() {
 	const [total, setTotal] = useState(0);
@@ -53,14 +54,14 @@ function App() {
 						<i>"Now's a great time to vacation in Rhode Island, and even visit your second home!"</i> - <b>Gina Raimondo</b>, 2020
 					</p>
 
-					<p class='subtitle is-7 has-text-centered' style={{ marginBottom: 0 }}>
+					<CloutText>
 						Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a>, <b>u/whalecat4</b>,
 						and <a class='has-text-primary-light' href='https://github.com/dillonfagan'><b>dillonfagan</b></a>, with help from friends.
-					</p>
-					<p class='subtitle is-7 has-text-centered'>
+					</CloutText>
+					<CloutText>
 						This app is <a class='has-text-primary-light' href='https://en.wikipedia.org/wiki/Free_software'><b>free software</b></a>,
 						and its source is available on <a class='has-text-primary-light' href='https://github.com/akc8012/gina-rona-app'><b>GitHub</b></a>.
-					</p>
+					</CloutText>
 				</div>
 			</div>
 		</section>
