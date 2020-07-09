@@ -1,9 +1,9 @@
 import { h } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 
-import { calculateTotalNewCases } from './calculateTotalNewCases';
-import { fetchCovidCases as getCovidCasesWith } from './fetchCovidCases';
-import { useInterval } from './useInterval';
+import { calculateTotalNewCases } from '../calculateTotalNewCases';
+import { fetchCovidCases as getCovidCasesWith } from '../fetchCovidCases';
+import { useInterval } from '../useInterval';
 
 export function CaseCounter() {
 	const [total, setTotal] = useState(0);
