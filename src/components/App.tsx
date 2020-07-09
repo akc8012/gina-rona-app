@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { CloutText } from './CloutText';
 import { CaseCounter } from './CaseCounter';
+import { GinaQuotes } from './GinaQuotes';
 
 export function App() {
 	return (
@@ -17,14 +18,13 @@ export function App() {
 				<CaseCounter />
 
 				<div style={{ position: 'absolute', bottom: '0' }}>
-					<p class='bottom-text subtitle is-5'>
-						<i>"Now's a great time to vacation in Rhode Island, and even visit your second home!"</i> - <b>Gina Raimondo</b>, 2020
-					</p>
+					<GinaQuotes />
 
 					<CloutText>
 						Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a>, <b>u/whalecat4</b>,
 						and <a class='has-text-primary-light' href='https://github.com/dillonfagan'><b>dillonfagan</b></a>, with help from friends.
 					</CloutText>
+
 					<CloutText>
 						This app is <a class='has-text-primary-light' href='https://en.wikipedia.org/wiki/Free_software'><b>free software</b></a>,
 						and its source is available on <a class='has-text-primary-light' href='https://github.com/akc8012/gina-rona-app'><b>GitHub</b></a>.
