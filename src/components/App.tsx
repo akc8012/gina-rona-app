@@ -16,20 +16,20 @@ export function App() {
 				</p>
 
 				<CaseCounter />
+			</div>
 
-				<div style={{ position: 'absolute', bottom: '0' }}>
-					<GinaQuotes />
+			<div class='container'>
+				<GinaQuotes />
 
-					<CloutText>
-						Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a>, <b>u/whalecat4</b>,
-						and <a class='has-text-primary-light' href='https://github.com/dillonfagan'><b>dillonfagan</b></a>, with help from friends.
-					</CloutText>
+				<CloutText>
+					Made by <a class='has-text-primary-light' href='https://acolannino.io'><b>acolannino</b></a>, <b>u/whalecat4</b>,
+					and <a class='has-text-primary-light' href='https://github.com/dillonfagan'><b>dillonfagan</b></a>, with help from friends.
+				</CloutText>
 
-					<CloutText>
-						This app is <a class='has-text-primary-light' href='https://en.wikipedia.org/wiki/Free_software'><b>free software</b></a>,
-						and its source is available on <a class='has-text-primary-light' href='https://github.com/akc8012/gina-rona-app'><b>GitHub</b></a>.
-					</CloutText>
-				</div>
+				<CloutText>
+					This app is <a class='has-text-primary-light' href='https://en.wikipedia.org/wiki/Free_software'><b>free software</b></a>,
+					and its source is available on <a class='has-text-primary-light' href='https://github.com/akc8012/gina-rona-app'><b>GitHub</b></a>.
+				</CloutText>
 			</div>
 		</section>
 	);
