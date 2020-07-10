@@ -18,7 +18,7 @@ export function CloutFooter() {
 
 function CloutLine(props: any) {
 	return (
-		<p class='content is-small has-text-centered' style={{ marginBottom: 0, color: 'rgba(255, 255, 255, 0.6)' }}>
+		<p class='content is-small has-text-centered' style={{ marginBottom: 0, color: 'rgba(255, 255, 255, 0.4)' }}>
 			{props.children}
 		</p>
 	);
