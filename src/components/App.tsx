@@ -20,7 +20,7 @@ export function App() {
 
 			<div class='container'>
 				<GinaQuotes />
-				<CloutFooter />
+				{/* <CloutFooter /> */}
 			</div>
 		</section>
 	);
