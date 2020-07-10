@@ -1,9 +1,11 @@
 import { h } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
+import { useInterval } from '../useInterval';
 
 export function GinaQuotes() {
-	const [startNdx, setStartNdx] = useState(-1);
+	const [quoteNdx, setQuoteNdx] = useState(-1);
 
+	const transitionDelay = 3500;
 	const quotes = [
 		'We’re setting an example for the rest of the country to follow',
 		'Pat yourself on the back!',
@@ -13,13 +15,16 @@ export function GinaQuotes() {
 	];
 
 	useEffect(() => {
-		let index = Math.floor(Math.random() * quotes.length);
-		setStartNdx(index);
+		setQuoteNdx(Math.floor(Math.random() * quotes.length));
 	}, []); // [] means only do this once on page-load
 
+	useInterval(() => {
+		setQuoteNdx(Math.floor(Math.random() * quotes.length));
+	}, transitionDelay);
+
 	let quote: any = null;
-	if (startNdx >= 0)
-		quote = <Quote>{quotes[startNdx]}</Quote>;
+	if (quoteNdx >= 0)
+		quote = <Quote>{quotes[quoteNdx]}</Quote>;
 
 	return quote;
 }
