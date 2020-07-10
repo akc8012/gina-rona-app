@@ -15,11 +15,11 @@ export function GinaQuotes() {
 	];
 
 	useEffect(() => {
-		setQuoteNdx(Math.floor(Math.random() * quotes.length));
+		setQuoteNdx(randomRange(quotes.length));
 	}, []); // [] means only do this once on page-load
 
 	useInterval(() => {
-		setQuoteNdx(Math.floor(Math.random() * quotes.length));
+		setQuoteNdx(randomRange(quotes.length));
 	}, transitionDelay);
 
 	let quote: any = null;
@@ -27,6 +27,10 @@ export function GinaQuotes() {
 		quote = <Quote>{quotes[quoteNdx]}</Quote>;
 
 	return quote;
+}
+
+function randomRange(length: number) {
+	return Math.floor(Math.random() * length);
 }
 
 function Quote(props: any) {
