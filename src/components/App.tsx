@@ -21,15 +21,10 @@ export function App() {
 
 				<div class='container'>
 					<GinaQuotes />
-					{/* <CloutFooter /> */}
 				</div>
 			</section>
 
-			<footer class='footer has-background-dark'>
-				<div class='content has-text-light is-small has-text-centered'>
-					Hello footer friends.
-				</div>
-			</footer>
+			<CloutFooter />
 		</div>
 	);
 }
