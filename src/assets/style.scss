@@ -1,7 +1,9 @@
-// TODO: Use this to disable page scroll. Previously, it cut off the clout text :(
-// html,
-// body {
-//   margin: 0;
-//   height: 100%;
-//   overflow: hidden;
-// }
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.section {
+  flex: 1;
+}
