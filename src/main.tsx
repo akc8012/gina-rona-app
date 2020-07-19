@@ -33,7 +33,6 @@ function createCanvas(): HTMLCanvasElement {
 
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
-	canvas.style.zIndex = '15';
 	canvas.className = 'canvas';
 
 	return canvas;
