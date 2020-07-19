@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
-import { useInterval } from '../useInterval';
+import { useInterval } from '../hooks/useInterval';
+
 
 export function GinaQuotes() {
 	const [quoteNdx, setQuoteNdx] = useState(-1);

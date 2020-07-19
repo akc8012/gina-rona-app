@@ -1,5 +1,6 @@
 import { h } from 'preact';
 
+
 export function CloutFooter() {
 	return (
 		<footer class='footer has-background-dark' style={{ padding: '5rem 1.5rem 0.7rem' }}>
