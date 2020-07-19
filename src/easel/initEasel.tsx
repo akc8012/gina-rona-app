@@ -7,9 +7,7 @@ import ginaThree from '../assets/ginaThree.png';
 
 let stage: any = undefined;
 
-let ginaFace: any = undefined;
 let ginaFaceHeight: number = undefined;
-const ginaScaleFactor = 0.2;
 
 export function initEasel() {
 	stage = createStage();
@@ -19,7 +17,10 @@ export function initEasel() {
 }
 
 function createGinaFace() {
-	ginaFace = new createjs.Bitmap(selectGinaFace());
+	const ginaFace = new createjs.Bitmap(selectGinaFace());
+	ginaFace.name = 'ginaFace';
+
+	const ginaScaleFactor = 0.2;
 	ginaFaceHeight = ginaFace.image.height * ginaScaleFactor;
 
 	ginaFace.x = 0;
@@ -31,17 +32,24 @@ function createGinaFace() {
 }
 
 function selectGinaFace() {
-	return ginaThree;
+	const faces = [ginaTwo, ginaThree];
+	return faces[randomRange(faces.length)];
+}
+
+function randomRange(max: number) {
+	return Math.floor(Math.random() * Math.floor(max));
 }
 
 createjs.Ticker.framerate = 60;
 createjs.Ticker.addEventListener('tick', function () {
+	const ginaFace = stage.getChildByName('ginaFace');
+
 	ginaFace.x += 6;
 	ginaFace.y -= 10;
 
 	if (ginaFace.y + ginaFaceHeight < 0) {
-		ginaFace.x = 0;
-		ginaFace.y = stage.canvas.height;
+		stage.removeChild(ginaFace);
+		stage.addChild(createGinaFace());
 	}
 
 	stage.update();
