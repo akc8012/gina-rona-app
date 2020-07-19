@@ -1,4 +1,4 @@
-import { calculateTotalNewCases } from '../src/calculateTotalNewCases';
+import { calculateTotalNewCases } from './calculateTotalNewCases';
 
 test('calculate total new cases', () => {
 	let cases = calculateTotalNewCases(20000);
