@@ -1,5 +1,3 @@
-// TODO: Why is there an error?
-// import gina from './assets/two.png';
 import './assets/style.scss';
 import 'bulma/css/bulma.css'
 
