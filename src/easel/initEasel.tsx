@@ -1,24 +1,37 @@
 import * as createjs from '@createjs/easeljs';
 import { createStage } from './createStage';
-import ginaImage from '../assets/three.png';
+
+import ginaTwo from '../assets/ginaTwo.png';
+import ginaThree from '../assets/ginaThree.png';
 
 
 let stage: any = undefined;
 
-const ginaFace = new createjs.Bitmap(ginaImage);
+let ginaFace: any = undefined;
+let ginaFaceHeight: number = undefined;
 const ginaScaleFactor = 0.2;
-const ginaFaceHeight = ginaFace.image.height * ginaScaleFactor;
 
 export function initEasel() {
 	stage = createStage();
+	stage.addChild(createGinaFace());
+
+	console.log('my body is ready');
+}
+
+function createGinaFace() {
+	ginaFace = new createjs.Bitmap(selectGinaFace());
+	ginaFaceHeight = ginaFace.image.height * ginaScaleFactor;
 
 	ginaFace.x = 0;
 	ginaFace.y = stage.canvas.height;
 	ginaFace.scale = ginaScaleFactor;
 	ginaFace.alpha = 0.88;
-	stage.addChild(ginaFace);
 
-	console.log('my body is ready');
+	return ginaFace;
+}
+
+function selectGinaFace() {
+	return ginaThree;
 }
 
 createjs.Ticker.framerate = 60;
