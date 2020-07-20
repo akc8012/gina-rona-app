@@ -9,5 +9,5 @@ import { initEasel } from './easel/initEasel';
 render(<App />, document.getElementById('root'));
 
 document.getElementById('body').onload = function () {
-	initEasel();
+	// initEasel();
 }
