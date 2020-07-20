@@ -16,6 +16,7 @@ export function initEasel() {
 	console.log('my body is ready');
 }
 
+// TODO: handle gina face elsewhere
 function createGinaFace() {
 	const ginaFace = new createjs.Bitmap(selectGinaFace());
 	ginaFace.name = 'ginaFace';

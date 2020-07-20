@@ -11,6 +11,7 @@ export function createStage() {
 function createCanvas(): HTMLCanvasElement {
 	const canvas = document.createElement('canvas');
 
+	// TODO: resize on window resize
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	canvas.className = 'canvas';
